@@ -49,4 +49,30 @@ public class PetDatabase {
         System.out.println("Your choice: ");
     }
 
+    public void searchByName(String s){
+        printHeader();
+        int size = 0;
+        for (int i = 0; i < petDB.size(); i++){
+            if (petDB.get(i).getName().toLowerCase().equals(s)){
+                System.out.printf("|%3d | %-10s|%4d |\n", i, petDB.get(i).getName(), petDB.get(i).getAge());
+                size++;
+            }
+        }
+        System.out.println("+----------------------+");
+        System.out.println(size + " rows in set.");
+    }
+
+    public void searchByAge(int age){
+        printHeader();
+        int size = 0;
+        for (int i = 0; i < petDB.size(); i++){
+            if (petDB.get(i).getAge() == age){
+                System.out.printf("|%3d | %-10s|%4d |\n", i, petDB.get(i).getName(), petDB.get(i).getAge());
+                size++;
+            }
+        }
+        System.out.println("+----------------------+");
+        System.out.println(size + " rows in set.");
+    }
+
 }
