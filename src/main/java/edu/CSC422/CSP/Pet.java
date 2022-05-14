@@ -1,3 +1,8 @@
+/**
+ * Pet.java
+ *
+ * Definition of the Pet class
+ */
 package edu.CSC422.CSP;
 
 public class Pet {

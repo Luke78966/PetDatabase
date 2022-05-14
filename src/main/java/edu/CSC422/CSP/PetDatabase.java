@@ -1,3 +1,10 @@
+/**
+ * PetDatabase.java
+ *
+ * This file defines the PetDatabase class
+ */
+
+
 package edu.CSC422.CSP;
 
 import java.util.ArrayList;
@@ -11,10 +18,6 @@ public class PetDatabase {
 
     public void addPet(Pet p){
         petDB.add(p);
-    }
-
-    public int getSize(){
-        return petDB.size();
     }
 
     public void printHeader(){
@@ -35,7 +38,6 @@ public class PetDatabase {
         System.out.println("+----------------------+");
         System.out.println(petDB.size() + " rows in set.\n");
     }
-
 
     public void printMenu(){
         System.out.println("What would you like to do?");
@@ -75,4 +77,14 @@ public class PetDatabase {
         System.out.println(size + " rows in set.");
     }
 
+    public void updatePet(int id, String name, int age){
+        System.out.println(petDB.get(id).getName() + " " + petDB.get(id).getAge() + " has been changed to "
+                            + name + " " + age);
+        petDB.get(id).setName(name);
+        petDB.get(id).setAge(age);
+    }
+    public void removePet(int id){
+        System.out.println(petDB.get(id).getName() + " " + petDB.get(id).getAge() + " removed.");
+        petDB.remove(id);
+    }
 }
