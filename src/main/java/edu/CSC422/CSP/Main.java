@@ -12,7 +12,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
     Scanner input = new Scanner(System.in);
-    PetDatabase pdb = new PetDatabase();
+    DatabaseHandler handler = new DatabaseHandler();
+    PetDatabase pdb = handler.load();
+
         System.out.println("Pet Database Program\n");
         boolean run = true;
         while (run){
@@ -82,6 +84,7 @@ public class Main {
                 // Exit the program
                     System.out.println("Option 7 Selected");
                     run = false;
+                    handler.save(pdb);
                     System.out.println("Goodbye!");
                     break;
             }

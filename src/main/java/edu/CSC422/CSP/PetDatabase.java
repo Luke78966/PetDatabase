@@ -7,9 +7,10 @@
 
 package edu.CSC422.CSP;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PetDatabase {
+public class PetDatabase implements Serializable {
     public ArrayList<Pet> petDB;
 
     public PetDatabase(){
@@ -87,4 +88,11 @@ public class PetDatabase {
         System.out.println(petDB.get(id).getName() + " " + petDB.get(id).getAge() + " removed.");
         petDB.remove(id);
     }
+
+    public void save(){
+
+    }
+//    public PetDatabase load(){
+//
+//    }
 }

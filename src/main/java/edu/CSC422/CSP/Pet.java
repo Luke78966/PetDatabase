@@ -5,7 +5,9 @@
  */
 package edu.CSC422.CSP;
 
-public class Pet {
+import java.io.Serializable;
+
+public class Pet implements Serializable {
     private String name;
     private int age;
 
